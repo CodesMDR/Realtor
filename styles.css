@@ -1,0 +1,481 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Pacifico&family=Playfair+Display:wght@400;500;600;700;800;900&family=Seaweed+Script&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Playfair Display", serif;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.banner a {
+  text-decoration: none;
+}
+
+.banner .logo {
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  gap: 10px;
+  margin-left: 200px;
+}
+
+.banner .logo h1 {
+  font-family: "Seaweed Script", cursive;
+}
+.banner .logo img {
+  height: 90px;
+}
+
+.banner .right {
+  display: flex;
+  gap: 50px;
+  margin-right: 200px;
+}
+
+.banner .links a {
+  margin-right: 30px;
+  color: white;
+  font-size: 20px;
+  border-bottom: 5px solid transparent;
+}
+.banner .links a:hover {
+  border-bottom: 5px solid rgb(85, 182, 247);
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.603);
+}
+
+.banner .button a {
+  color: black;
+  font-size: 20px;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: white;
+  font-weight: bolder;
+}
+.banner .button a:hover {
+  background-color: rgb(85, 182, 247);
+  transition: 0.3s;
+  transform: scale(1);
+  color: rgb(0, 0, 0);
+}
+
+main .title {
+  float: left;
+  padding: 0px 200px;
+  color: rgb(250, 250, 250);
+}
+
+main .title h1 {
+  font-size: 50px;
+  padding-top: 120px;
+  padding-bottom: 50px;
+}
+
+main .title p {
+  margin-top: 20px;
+  width: 500px;
+}
+
+main .title span {
+  font-family: "Amatic SC", cursive;
+  color: rgb(111, 193, 248);
+}
+
+main .learn {
+  margin-top: 50px;
+}
+
+main .learn a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border: 1px solid black;
+  padding: 15px;
+  background-color: rgb(3, 149, 247);
+  backdrop-filter: blur(10px);
+  border-radius: 4px;
+}
+
+main .learn a:hover {
+  transition: 0.3s;
+  background-color: rgba(85, 182, 247, 0.74);
+}
+
+main .socials {
+  display: flex;
+  margin-top: 80px;
+}
+
+main .socials a {
+  font-size: 40px;
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.418);
+}
+
+main .socials a:hover {
+  color: white;
+  transition: 0.5s;
+  transform: scale(1);
+}
+
+/*SLIDER*/
+.slider-wrapper {
+  margin-top: 140px;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 16 / 9;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border: 2px solid white;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px,
+    rgba(245, 245, 245, 0.12) 0px -12px 30px,
+    rgba(255, 255, 255, 0.12) 0px 4px 6px,
+    rgba(255, 255, 255, 0.17) 0px 12px 13px,
+    rgba(255, 255, 255, 0.09) 0px -3px 5px;
+}
+
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+  padding: 5px;
+}
+
+.slider-nav {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  gap: 10px;
+  bottom: 10px;
+  left: 68%;
+}
+
+.slider-nav a {
+  background-color: rgba(8, 8, 8, 0.658);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: 0.9s;
+}
+
+.slider-nav a:hover {
+  background-color: white;
+}
+
+/*END SLIDER*/
+
+.sidebar {
+  visibility: hidden;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.466);
+  border-radius: 5px;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 5px 80px,
+    rgba(245, 245, 245, 0.12) 0px -12px 30px,
+    rgba(255, 255, 255, 0.12) 0px 4px 6px,
+    rgba(255, 255, 255, 0.17) 0px 12px 13px,
+    rgba(255, 255, 255, 0.09) 0px -3px 5px;
+}
+
+.sidebar a {
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar a:hover,
+.sidebar a:focus {
+  color: rgba(255, 255, 255, 0.61);
+}
+
+.fa-solid {
+  position: absolute;
+  right: 0;
+  visibility: hidden;
+}
+
+.main-page {
+  height: 100vh;
+  background: rgb(0, 0, 0, 0.6) url(images/house.jpg);
+  background-position: center;
+  background-blend-mode: darken;
+  border-bottom: 2px solid black;
+}
+
+/*ABOUT*/
+
+.about {
+  height: 50vh;
+  background: rgb(0, 0, 0, 0.6) url(images/furniture-998265_1920.jpg);
+  background-position: center;
+  background-blend-mode: darken;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+.about h1,
+.about h2,
+.about p {
+  color: white;
+}
+
+.about p {
+  width: 800px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.about h1 {
+  font-family: "Amatic SC", cursive;
+  color: rgb(111, 193, 248);
+  font-size: 100px;
+}
+
+.about h2 {
+  color: white;
+}
+
+/*GALLERY*/
+.gallery {
+  height: 100vh;
+  background: rgb(0, 0, 0, 0.6) url(images/wall-416060.jpg);
+  background-position: center;
+  background-blend-mode: darken;
+  border-bottom: 2px solid black;
+  color: white;
+}
+
+.gallery h1 {
+  font-family: "Amatic SC", cursive;
+  color: rgb(111, 193, 248);
+  font-size: 100px;
+  text-align: center;
+}
+
+/*CONTACT*/
+
+.contact {
+  height: 80vh;
+  background: rgb(0, 0, 0, 0.6) url(images/interior-2685521_1920.jpg);
+  background-position: center;
+  background-blend-mode: darken;
+}
+
+.contact h1 {
+  font-family: "Amatic SC", cursive;
+  color: rgb(111, 193, 248);
+  font-size: 100px;
+  text-align: center;
+}
+
+.contact h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+iframe {
+  border-radius: 5px;
+}
+.email p {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.email form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.274);
+  border-radius: 5px;
+}
+
+.email button {
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: rgb(18, 18, 19);
+  border-radius: 5px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.email button:hover {
+  background-color: rgba(0, 0, 0, 0.856);
+}
+
+.email input {
+  padding: 10px;
+  width: 400px;
+  border-radius: 3px;
+  border: none;
+  margin-bottom: 30px;
+}
+.email textarea:focus {
+  border: none;
+}
+.email textarea {
+  padding: 15px;
+  width: 100%;
+  height: 140px;
+  margin-bottom: 15px;
+  border: none;
+}
+
+.email input {
+  color: rgb(3, 3, 3);
+}
+
+input,
+textarea {
+  background-color: rgb(218, 218, 218);
+  color: rgb(0, 0, 0);
+  outline: none;
+}
+input[type="submit"] {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.801);
+}
+
+footer {
+  height: 26vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.993);
+  gap: 50px;
+  color: rgb(252, 252, 252);
+}
+
+footer h1 {
+  border-bottom: 3px solid rgb(111, 193, 248);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+footer p {
+  padding-bottom: 5px;
+}
+footer p:hover {
+  color: rgb(111, 193, 248);
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  gap: 55px;
+  position: relative;
+}
+
+.footer-top .news {
+  margin-left: 150px;
+}
+
+.footer-top .news h5 {
+  margin-bottom: 10px;
+  font-weight: 100;
+  font-size: 16px;
+}
+
+.footer-top input[type="email"] {
+  padding: 10px 40px;
+  border: none;
+  text-align: left;
+  position: absolute;
+}
+
+.footer-top span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin-left: 190px;
+  width: 45px;
+  height: 37px;
+  background-color: rgb(13, 138, 196);
+  cursor: pointer;
+}
+
+.copywrite {
+  text-align: center;
+  font-size: 10px;
+}
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 1724px) {
+  .images img {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 1524px) {
+  .images img {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 1333px) {
+  main .title {
+    font-size: 10px;
+  }
+
+  .images {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1309px) {
+  header .banner {
+    display: none;
+  }
+
+  main {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    visibility: visible;
+    width: 100%;
+  }
+  .fa-solid {
+    visibility: visible;
+  }
+}
